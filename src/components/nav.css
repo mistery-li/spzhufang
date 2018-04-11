@@ -1,0 +1,22 @@
+.back {
+  width: 100%;
+  height: 888px;
+  mask-image:-webkit-gradient(linear,top, bottom,from(#00001a),to(#fff));
+}
+.nav {
+  position: absolute;
+  right: 220px;
+  top: 30px;
+  z-index: 999;
+}
+
+.nav li {
+  list-style-type: none;
+  display: inline-block;
+}
+.nav a {
+  padding: 10px;
+  margin: 10px;
+  color: #fff;
+  text-decoration: none;
+}
