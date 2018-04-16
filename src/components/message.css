@@ -1,12 +1,61 @@
 .msg-box {
-  width: 560px;
+  margin: 10px auto;
+  width: 688px;
   box-shadow: 1px;
-  position: absolute;
-  top: 30px;
-  left: 30px;
   border: 1px solid #a9a9a9;
 }
-.msg-box img {
-  width: 40px;
-  height: 40px;
+.msg {
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 5px;
+}
+.rel-title {
+  text-align: left;
+  padding: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.announcer {
+  display: flex;
+}
+
+.announce-time {
+  text-align: right;
+  margin-right: 10px;
+  margin-top: -40px;
+}
+
+.announcer a {
+  text-decoration: none;
+  color: black;
+}
+.announcer a:hover {
+  color: #99ccff;
+}
+
+.date {
+  padding: 0 5px;
+}
+.time {
+  padding: 0 10px;
+}
+.msg-info {
+  position: relative;
+  bottom: 20px;
+  margin-left: 60px;
+}
+
+.location {
+  text-align: left;
+  margin-top: 30px;
+}
+.location a {
+  text-decoration: nont;
+  font-size: 18px;
+  color: #99ccff;
+}
+.msg-desc {
+  width: 630px;
+  display: -webkit-box;
+  white-space: nowrap;
+  overflow: hidden;
 }
