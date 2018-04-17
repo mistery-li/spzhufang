@@ -1,0 +1,17 @@
+.avatar {
+    flex: 1;
+    text-align: left;
+  }
+
+  .username {
+    margin-left: 10px;
+    position: relative;
+    bottom: 20px;
+  }
+
+  .avatar img {
+    width: 40px;
+    height: 40px;
+    padding: 10px 0 0 10px;
+    border-radius: 3px;
+  }

@@ -1,13 +1,7 @@
-.back {
-  width: 100%;
-  height: 888px;
-  mask-image:-webkit-gradient(linear,top, bottom,from(#00001a),to(#fff));
-}
 .nav {
-  position: absolute;
-  right: 220px;
-  top: 30px;
-  z-index: 999;
+  margin: 0 auto;
+  padding: 20px 30px;
+  background: #303030;
 }
 
 .nav li {
@@ -15,8 +9,9 @@
   display: inline-block;
 }
 .nav a {
-  padding: 10px;
-  margin: 10px;
-  color: #fff;
+  padding: 20px;
+  margin: 20px;
   text-decoration: none;
+  color: #fff;
+  font-size: 18px;
 }
