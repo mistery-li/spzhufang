@@ -1,6 +1,6 @@
 .msg-box {
   width: 560px;
-  box-shadow: 1px;
+  box-shadow: 2px 2px px #a9a9a9;
   position: absolute;
   top: 30px;
   left: 30px;
