@@ -9,6 +9,7 @@ class Message extends React.Component {
     this.state = {
       showMore: false,
       lastPageY: window.pageYOffset,
+      clsName: '',
       houses: [
         {
           id: 1,
@@ -62,13 +63,12 @@ class Message extends React.Component {
         }
       ],
 
-      
     };
 
   }
   // 初始化鉴定滚动实践
   componentDidMount() {
-    this.showMore(this.state.houses );
+    this.showMore(this.state.houses);
     console.log('url', this.props.location.pathname);
   }
   // 下拉展示
@@ -94,20 +94,22 @@ class Message extends React.Component {
   }
   houseInfoCollect(index) {
     // 收藏
-    console.log('collect', index);
-    console.log('path', this.props.location.pathname);
+    // 点击收藏，再次点击取消收藏
+    // 先缓存收藏状态，延迟写入数据库
   }
   // 城市筛选
   selectCity() {
-    console.log('filter', 1);
     let filterHouse = this.state.houses.filter((item) => {
       return item === 'shenzhen';
     });
+
     this.setState({
-      houses: filterHouse
+      houses: filterHouse,
+      clsName: 'selected'
     });
   }
   render() {
+    const clsName = this.state.clsName;
     const housesInfo = this.state.houses.map((item, index) => {
       return (
         <div className="msg" key={index}>
@@ -123,7 +125,7 @@ class Message extends React.Component {
             <a className="collection" href="#" onClick={() => this.houseInfoCollect(index)}>收藏</a>
           </div>
           <div className="msg-info">
-            <div className="location"><a href="./messageinfo">{item.location}</a></div>
+            <div className="location"><a href={`./msgInfo/${item.id}`}>{item.location}</a></div>
             <p className="msg-desc">{item.houseInfo}</p>
           </div>
         </div >
@@ -131,21 +133,21 @@ class Message extends React.Component {
 
     })
     return (
-      <div>
-      <div className="city">
+      <div className="message">
+        <div className="city">
           <div className="hot-city">热门城市</div>
           <ul>
-            <li><a href="#" onClick={() => this.selectCity()}>深圳</a></li>
-            <li><a href="#" onClick={() => this.selectCity()}>广州</a></li>
-            <li><a href="#" onClick={() => this.selectCity()}>北京</a></li>
-            <li><a href="#" onClick={() => this.selectCity()}>上海</a></li>
+            <li><a href="#" className={clsName} onClick={() => this.selectCity()}>深圳</a></li>
+            <li><a href="#" className={clsName} onClick={() => this.selectCity()}>广州</a></li>
+            <li><a href="#" className={clsName} onClick={() => this.selectCity()}>北京</a></li>
+            <li><a href="#" className={clsName} onClick={() => this.selectCity()}>上海</a></li>
           </ul>
         </div>
         <div className="msg-box" >
-        <div className="rel-title">最新发布</div>
-        <div>
-          {housesInfo}
-        </div>
+          <div className="rel-title">最新发布</div>
+          <div>
+            {this.state.houses ? (housesInfo) : <div>Loading...</div>}
+          </div>
         </div>
       </div>
     );

@@ -1,8 +1,13 @@
+.message {
+  background-image: url('../images/message_back2.jpg');
+  min-height: 1024px;
+}
 .msg-box {
   margin: 10px auto;
   width: 688px;
   box-shadow: 1px;
   border: 1px solid #a9a9a9;
+  background: #fff;
 }
 .city {
   border: 1px solid #a9a9a9;
@@ -10,6 +15,7 @@
   display: flex;
   width: 688px;
   margin: 0 auto;
+  background: #fff;
 }
 
 .hot-city {
@@ -96,4 +102,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.selected {
+  color: #99ccff;
 }

@@ -21,7 +21,7 @@ ReactDOM.render((
         <Route path="/message" component={Message} />
         <Route path="/search" component={Search} />
         <Route path="/release" component={Release} />
-        <Route path="/messageinfo" component={MessageInfo} />
+        <Route path="/msgInfo/:id" component={MessageInfo} />
     </div>
   </Router>
 ),

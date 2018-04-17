@@ -1,7 +1,7 @@
 .backImg {
   width: 100%;
-  height: 555px;
-  -webkit-mask-image: -webkit-linear-gradient(top, #303030, #303030);
+  height: 625px;
+  -webkit-mask-image: -webkit-linear-gradient(top,#000000, #000000);
   -webkit-mask-size: cover;
 }
 
@@ -15,22 +15,29 @@
 }
 
 .title {
-  color: indianred;
+  color: #fff;
   position: absolute;
   top: 20%;
-  font-size: 44px;
+  font-size: 48px;
   text-align: center;
   z-index: 10;
   width: 80%;
 }
-
+.title-left {
+  animation: fade-in 2s ease 0s 1;
+  animation-fill-mode:forwards;
+}
 .title-right {
   margin-left: 40%;
+  opacity: 0;
+  animation: fade-in 2s ease 0s 1;
+  animation-fill-mode:forwards;
 }
 
 .about {
   padding: 100px 0;
   font-size: 33px;
+  margin: 0 auto;
 }
 
 .desc {
@@ -40,9 +47,11 @@
 
 .desc span {
   width: 263px;
-  padding: 25px;
+  padding: 25px 180px;
   margin: 0 auto;
   font-size: 33px;
+  background: #303030;
+  color: #fff;
   border: 1px solid #d9d9d9;
   border-radius: 3px;
 }
@@ -52,6 +61,7 @@
   background: #303030;
   color: #fff;
   font-size: 26px;
+  
 }
 
 .me {
@@ -72,4 +82,18 @@
   text-decoration: none;
   color: rgb(130, 147, 202);
   font-size: 27px;
+}
+.job-desc {
+  padding: 10px 0;
+}
+
+/* title动画 */
+@keyframes fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+span {
+  animation: fade-in 2s ease 0s 1;
+  animation-fill-mode:forwards;
 }
