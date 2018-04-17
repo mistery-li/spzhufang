@@ -4,16 +4,46 @@
   box-shadow: 1px;
   border: 1px solid #a9a9a9;
 }
+.city {
+  border: 1px solid #a9a9a9;
+  border-radius: 3px;
+  display: flex;
+  width: 688px;
+  margin: 0 auto;
+}
+
+.hot-city {
+  padding: 15px;
+  text-align: center;
+}
+
+.city ul {
+  flex: 1;
+}
+
+.city li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.city a {
+  padding: 0 30px;
+  text-decoration: none;
+  color: indianred;
+}
+
 .msg {
   border-bottom: 1px solid #d9d9d9;
   padding-bottom: 5px;
 }
+
 .rel-title {
   text-align: left;
   padding: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #d9d9d9;
 }
+
 .announcer {
   display: flex;
 }
@@ -28,6 +58,7 @@
   text-decoration: none;
   color: black;
 }
+
 .announcer a:hover {
   color: #99ccff;
 }
@@ -35,8 +66,13 @@
 .date {
   padding: 0 5px;
 }
+
 .time {
   padding: 0 10px;
+}
+.collection {
+  text-decoration: none;
+  
 }
 .msg-info {
   position: relative;
@@ -48,14 +84,16 @@
   text-align: left;
   margin-top: 30px;
 }
+
 .location a {
   text-decoration: nont;
   font-size: 18px;
   color: #99ccff;
 }
+
 .msg-desc {
   width: 630px;
-  display: -webkit-box;
-  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

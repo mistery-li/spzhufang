@@ -1,14 +1,19 @@
 .backImg {
   width: 100%;
   height: 555px;
+  -webkit-mask-image: -webkit-linear-gradient(top, #303030, #303030);
+  -webkit-mask-size: cover;
 }
+
 .head img {
   border-style: none;
 }
+
 .content {
   height: 100%;
   padding: 120px;
 }
+
 .title {
   color: indianred;
   position: absolute;
@@ -27,10 +32,12 @@
   padding: 100px 0;
   font-size: 33px;
 }
+
 .desc {
   display: flex;
   margin: 0 auto;
 }
+
 .desc span {
   width: 263px;
   padding: 25px;
@@ -39,26 +46,30 @@
   border: 1px solid #d9d9d9;
   border-radius: 3px;
 }
+
 .footer {
   padding: 120px;
   background: #303030;
   color: #fff;
   font-size: 26px;
 }
+
 .me {
   text-align: left;
 }
+
 .contact {
   margin-left: 20px;
   font-size: 23px;
 }
+
 .idea {
   text-align: right;
   margin-right: 220px;
 }
+
 .idea a {
   text-decoration: none;
   color: rgb(130, 147, 202);
   font-size: 27px;
 }
-
