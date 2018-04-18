@@ -1,7 +1,7 @@
 import React from 'react';
 import './avatar.css';
 
-const imgSrc = require('../images/avatar.png');
+
 
 export default class Avatar extends React.Component {
     constructor(props) {
@@ -10,8 +10,8 @@ export default class Avatar extends React.Component {
     render() {
         return (
             <div>
-                <div className="avatar">
-                    <img src={imgSrc} alt={this.props.alt} />
+                <div className="avatar" onMouseEnter={this.props.mouseHandle}>
+                    <img src={this.props.src} alt={this.props.alt} />
                     <span className="username"><a href="#">{this.props.houseUsername}</a></span>
                 </div>
             </div>
